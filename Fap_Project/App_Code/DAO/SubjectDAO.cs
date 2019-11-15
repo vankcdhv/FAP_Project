@@ -43,5 +43,23 @@ namespace Fap_Project.App_Code.DAO
             return list;
         }
 
+        // Function By Nguyen Huy Hoang
+        public List<Subject> getSubjectByClassID(int classID)
+        {
+            List<Subject> list = new List<Subject>();
+            String query = @"SELECT DISTINCT s.SubjectID ,s.Name
+                            FROM ClassSubjects cs, Subjects s
+                            WHERE  cs.SubjectID = s.SubjectID  and cs.ClassID =  " + classID;
+            DataTable data = DataProvider.Instance.excuteQuery(query, null);
+            foreach (DataRow dr in data.Rows)
+            {
+                string id = dr["SubjectID"].ToString();
+                string name = dr["Name"].ToString();
+                Subject s = new Subject(id, name);
+                list.Add(s);
+            }
+            return list;
+        }
+
     }
 }

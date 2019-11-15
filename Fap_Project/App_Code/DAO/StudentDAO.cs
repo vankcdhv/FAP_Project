@@ -11,6 +11,24 @@ namespace Fap_Project.App_Code.DAO
     public class StudentDAO
     {
 
+         private StudentDAO() { }
+
+        private static StudentDAO instance;
+
+        public static StudentDAO Instance
+        {
+            get
+            {
+                if (instance == null) instance = new StudentDAO();
+                return instance;
+            }
+
+            private set
+            {
+                instance = value;
+            }
+        }
+
         //Dũng : getStudentByAccountID
         public Student getStudentByAccountID(int accountID)
         {
@@ -33,6 +51,8 @@ namespace Fap_Project.App_Code.DAO
             }
             return null;
         }
+
+
 
 
     }

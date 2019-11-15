@@ -67,15 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Components\Footer.ascx" />
     <Content Include="Components\Header.ascx" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Public\CSS\Login.css" />
     <Content Include="Public\CSS\Style.css" />
-    <Content Include="StudentHome.aspx" />
     <Content Include="StudentGrade.aspx" />
-    <Content Include="TeacherHome.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -95,13 +92,6 @@
     <Compile Include="App_Code\DTO\Student.cs" />
     <Compile Include="App_Code\DTO\Subject.cs" />
     <Compile Include="App_Code\DTO\TimeTable.cs" />
-    <Compile Include="Components\Footer.ascx.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Components\Footer.ascx.designer.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Components\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,26 +114,12 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentHome.aspx.cs">
-      <DependentUpon>StudentHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StudentHome.aspx.designer.cs">
-      <DependentUpon>StudentHome.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StudentGrade.aspx.cs">
       <DependentUpon>StudentGrade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="StudentGrade.aspx.designer.cs">
       <DependentUpon>StudentGrade.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TeacherHome.aspx.cs">
-      <DependentUpon>TeacherHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TeacherHome.aspx.designer.cs">
-      <DependentUpon>TeacherHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

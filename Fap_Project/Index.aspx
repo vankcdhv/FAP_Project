@@ -9,11 +9,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="padding-bottom:20px">
+        <div>
             <asp:PlaceHolder ID="Header" runat="server"></asp:PlaceHolder>
-        </div>
-        <div style="padding-top:20px">
-            <asp:PlaceHolder ID="Footer" runat="server"></asp:PlaceHolder>
         </div>
     </form>
 </body>

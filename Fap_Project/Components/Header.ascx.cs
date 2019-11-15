@@ -16,22 +16,11 @@ namespace FAP_Project.Components
             if (account == null)
             {
                 this.DivAccount.Visible = false;
-                this.DivMenu.Visible = false;
             }
             else
             {
                 this.AccountLink.Text = account.Username;
-                this.AccountLink.NavigateUrl = "AccountDetail.aspx";
-                if (account.Type == 1)
-                {
-                    HomeLink.NavigateUrl = "TeacherHome.aspx";
-                    HomeLink.Text = "Home";
-                }
-                else
-                {
-                    HomeLink.NavigateUrl ="StudentHome.aspx";
-                    HomeLink.Text = "Home";
-                }
+                this.AccountLink.NavigateUrl = "AccountDetail.aspx?id=" + account.Id;
             }
         }
     }

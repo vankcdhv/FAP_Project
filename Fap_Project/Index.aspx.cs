@@ -1,5 +1,4 @@
-﻿using Fap_Project.App_Code.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,18 +15,6 @@ namespace FAP_Project
             {
                 Response.Redirect("Login.aspx");
             }
-            else
-            {
-                Account account = (Account)Session["Account"];
-                if (account.Type == 1)
-                {
-                    Response.Redirect("TeacherHome.aspx");
-                }
-                else
-                {
-                    Response.Redirect("StudentHome.aspx");
-                }
-            }
             if (!IsPostBack)
             {
                 loadComponents();
@@ -38,8 +25,6 @@ namespace FAP_Project
         {
             string load_control = "Components/Header.ascx";
             Header.Controls.Add(Page.LoadControl(load_control));
-            load_control = "Components/Footer.ascx";
-            Footer.Controls.Add(Page.LoadControl(load_control));
         }
     }
 }

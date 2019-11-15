@@ -14,19 +14,22 @@ namespace Fap_Project
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) 
+            if ((Account)Session["Account"] == null)
             {
-                if (((Account)Session["Account"] == null)){
-                    Response.Redirect("Login.aspx");
-                }
-                else
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                Account account = (Account)Session["Account"];
+                Student s = StudentDAO.Instance.getStudentByAccountID(account.Id);
+                if (!IsPostBack)
                 {
-                    Account account = (Account)Session["Account"];
-                    Student s = StudentDAO.Instance.getStudentByAccountID(account.Id);
                     lbStudent.Text = s.Name + " (" + s.Rollnumber + " )";
                     LoadDataForListBox();
                     LoadDataForDGV();
+                    
                 }
+                loadComponents();
             }
         }
 
@@ -74,6 +77,12 @@ namespace Fap_Project
         protected void lbSubject_SelectedIndexChanged1(object sender, EventArgs e)
         {
             LoadDataForDGV();
+        }
+
+        void loadComponents()
+        {
+            string load_control = "Components/Header.ascx";
+            Header.Controls.Add(Page.LoadControl(load_control));
         }
     }
 }

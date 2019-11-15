@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddMark.aspx" />
     <Content Include="Components\Header.ascx" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
@@ -78,13 +77,6 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddMark.aspx.cs">
-      <DependentUpon>AddMark.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddMark.aspx.designer.cs">
-      <DependentUpon>AddMark.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Code\DAO\AccountDAO.cs" />
     <Compile Include="App_Code\DAO\ClassDAO.cs" />
     <Compile Include="App_Code\DAO\ClassSubjectDAO.cs" />
@@ -99,7 +91,6 @@
     <Compile Include="App_Code\DTO\Mark.cs" />
     <Compile Include="App_Code\DTO\Student.cs" />
     <Compile Include="App_Code\DTO\Subject.cs" />
-    <Compile Include="App_Code\DTO\Teacher.cs" />
     <Compile Include="App_Code\DTO\TimeTable.cs" />
     <Compile Include="Components\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>

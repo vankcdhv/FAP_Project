@@ -1,0 +1,9 @@
+
+*.config
+FAP_Project/.vs/FAP_Project/v16/.suo
+FAP_Project/.vs/FAP_Project/v16/Server/sqlite3/storage.ide-shm
+FAP_Project/.vs/FAP_Project/v16/Server/sqlite3/storage.ide-wal
+FAP_Project/obj/Debug/FAP_Project.csproj.FileListAbsolute.txt
+FAP_Project/obj/Debug/FAP_Project.csprojAssemblyReference.cache
+FAP_Project/obj/Debug/FAP_Project.dll
+FAP_Project/obj/Debug/FAP_Project.pdb

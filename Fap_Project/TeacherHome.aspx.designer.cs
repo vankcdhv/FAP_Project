@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FAP_Project
+namespace Fap_Project
 {
 
 
-    public partial class Index
+    public partial class TeacherHome
     {
 
         /// <summary>

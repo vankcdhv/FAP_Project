@@ -15,6 +15,24 @@ namespace FAP_Project.Components
     {
 
         /// <summary>
+        /// DivMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivMenu;
+
+        /// <summary>
+        /// HomeLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HomeLink;
+
+        /// <summary>
         /// DivAccount control.
         /// </summary>
         /// <remarks>
@@ -31,5 +49,14 @@ namespace FAP_Project.Components
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink AccountLink;
+
+        /// <summary>
+        /// logoutLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink logoutLink;
     }
 }

@@ -24,6 +24,8 @@ namespace Fap_Project
         {
             string load_control = "Components/Header.ascx";
             Header.Controls.Add(Page.LoadControl(load_control));
+            load_control = "Components/Footer.ascx";
+            Footer.Controls.Add(Page.LoadControl(load_control));
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

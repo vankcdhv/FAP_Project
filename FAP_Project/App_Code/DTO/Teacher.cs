@@ -26,6 +26,7 @@ namespace Fap_Project.App_Code.DTO
             Rollnumber = rollnumber;
             Name = name;
             Mail = mail;
+
             Dob = dob;
             Address = address;
             Image = image;

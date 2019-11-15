@@ -21,15 +21,15 @@ namespace FAP_Project.Components
             else
             {
                 this.AccountLink.Text = account.Username;
-                this.AccountLink.NavigateUrl = "AccountDetail.aspx";
+                this.AccountLink.NavigateUrl = @"~/AccountDetail.aspx";
                 if (account.Type == 1)
                 {
-                    HomeLink.NavigateUrl = "TeacherHome.aspx";
+                    HomeLink.NavigateUrl = @"~/TeacherHome.aspx";
                     HomeLink.Text = "Home";
                 }
                 else
                 {
-                    HomeLink.NavigateUrl ="StudentHome.aspx";
+                    HomeLink.NavigateUrl = @"~/StudentHome.aspx";
                     HomeLink.Text = "Home";
                 }
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fap_Project.App_Code.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,14 @@ namespace Fap_Project
             {
                 Response.Redirect("Login.aspx");
             }
-
+            else
+            {
+                Account account = (Account)Session["Account"];
+                if (account.Type == 0)
+                {
+                    Response.Redirect("~/StudentHome.aspx");
+                }
+            }
             if (!IsPostBack)
             {
                 loadComponents();

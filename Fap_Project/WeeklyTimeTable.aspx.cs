@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace Fap_Project
 {
-    public partial class StudentHome : System.Web.UI.Page
+    public partial class WeeklyTimeTable : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,9 +19,9 @@ namespace Fap_Project
             else
             {
                 Account account = (Account)Session["Account"];
-                if (account.Type == 0)
+                if (account.Type == 1)
                 {
-                    Response.Redirect("~/TeacherHome.aspx");
+                    Response.Redirect("TeacherHome.aspx");
                 }
             }
             if (!IsPostBack)
@@ -29,6 +29,7 @@ namespace Fap_Project
                 loadComponents();
             }
         }
+
         void loadComponents()
         {
             string load_control = "Components/Header.ascx";

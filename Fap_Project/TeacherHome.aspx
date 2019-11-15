@@ -13,7 +13,23 @@
             <asp:PlaceHolder ID="Header" runat="server"></asp:PlaceHolder>
         </div>
         <div class="wrap-all">
-            
+            <div class="leftdiv">
+                <fieldset>
+                    <legend>Nghiệp vụ</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="#">Add mark</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">Take attended</a>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
         </div>
         <div style="padding-top:20px">
             <asp:PlaceHolder ID="Footer" runat="server"></asp:PlaceHolder>

@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Attendance_Report.aspx" />
     <Content Include="Components\Footer.ascx" />
     <Content Include="Components\Header.ascx" />
     <Content Include="Index.aspx" />
@@ -78,6 +79,7 @@
     <Content Include="TeacherHome.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="WeeklyTimeTable.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\DAO\AccountDAO.cs" />
@@ -95,6 +97,13 @@
     <Compile Include="App_Code\DTO\Student.cs" />
     <Compile Include="App_Code\DTO\Subject.cs" />
     <Compile Include="App_Code\DTO\TimeTable.cs" />
+    <Compile Include="Attendance_Report.aspx.cs">
+      <DependentUpon>Attendance_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance_Report.aspx.designer.cs">
+      <DependentUpon>Attendance_Report.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Components\Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,6 +160,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyTimeTable.aspx.cs">
+      <DependentUpon>WeeklyTimeTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeeklyTimeTable.aspx.designer.cs">
+      <DependentUpon>WeeklyTimeTable.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

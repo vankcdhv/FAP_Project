@@ -13,8 +13,12 @@
             <asp:PlaceHolder ID="Header" runat="server"></asp:PlaceHolder>
         </div>
         <div class="wrap-all">
-            
+         <div>
+            <a href="Attendance_Report.aspx" ><h1>Attendance Report</h1></a>
+       </div>    
         </div>
+
+
         <div style="padding-top:20px">
             <asp:PlaceHolder ID="Footer" runat="server"></asp:PlaceHolder>
         </div>

@@ -84,7 +84,7 @@ namespace Fap_Project.App_Code.DAO
         public DataTable getCourseInfo(String studentID, String subjectID)
         {
             //DataTable data = null;
-            String query = "EXEC dbo.GetAllBySubjecIDtAndStudentID @StudentID = " + studentID + ", @SubjectID = " + subjectID;
+            String query = "EXEC dbo.GetAllBySubjecIDtAndStudentID @StudentID = "+studentID +", @SubjectID = "+subjectID;
             DataTable data = DataProvider.Instance.excuteQuery(query, null);
 
             return data;

@@ -2,6 +2,7 @@
 using Fap_Project.App_Code.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,9 +16,12 @@ namespace Fap_Project
         {
             if (Session["Account"] == null)
                 Response.Redirect("Login.aspx");
-
-            loadDataListBox();
-            showAttendanceReport();
+            if (!IsPostBack)
+            {
+                loadComponents();
+                loadDataListBox();
+                showAttendanceReport();
+            }
         }
 
         public void loadDataListBox()
@@ -48,15 +52,31 @@ namespace Fap_Project
 
             Student temp = StudentDAO.Instance.getStudentByAccountID(accountID);
             String studentID = temp.Rollnumber;
+            //String studentID = "HE130952";
 
             String subjectID = lbSubject.SelectedValue.ToString();
-            dgv.DataSource = SubjectDAO.Instance.getCourseInfo(subjectID, subjectID);
+            //String subjectID = "PRJ301";
+            DataTable dtb = SubjectDAO.Instance.getCourseInfo(studentID, subjectID);
+            dgv.DataSource = dtb;
             dgv.DataBind();
+            for(int i =0; i< dtb.Rows.Count;i++)
+            {
+                DateTime date = Convert.ToDateTime(dtb.Rows[i]["Day"]);
+                dgv.Rows[i].Cells[0].Text = date.ToShortDateString();
+            }
         }
 
         protected void lbSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
             showAttendanceReport();
+        }
+
+        void loadComponents()
+        {
+            string load_control = "Components/Header.ascx";
+            Header.Controls.Add(Page.LoadControl(load_control));
+            load_control = "Components/Footer.ascx";
+            Footer.Controls.Add(Page.LoadControl(load_control));
         }
     }
 }

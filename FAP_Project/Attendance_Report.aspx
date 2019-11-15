@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Attendance Report</title>
+     <link rel="stylesheet" href="Public/CSS/Style.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -14,19 +15,21 @@
         <div class="wrap-all">
             <div class="leftside">
 
-                <asp:ListBox AutoPostBack="true" ID="lbSubject" runat="server" OnSelectedIndexChanged="lbSubject_SelectedIndexChanged"></asp:ListBox>
+                <asp:ListBox AutoPostBack="true" ID="lbSubject" runat="server" Width="300px" Rows="10" OnSelectedIndexChanged="lbSubject_SelectedIndexChanged"></asp:ListBox>
                  
             </div>
 
             <div class="content">
                 
-                <asp:GridView  AutoPostBack="true" ID="dgv" runat="server">
+                <asp:GridView  AutoPostBack="true" ID="dgv" runat="server" AutoGenerateColumns="False">
                     <Columns>
-                        <asp:BoundField DataField="Day" HeaderText="DATE" />
+                        <asp:BoundField HeaderText="DATE" />
                         <asp:BoundField DataField="Slot" HeaderText="SLOT" />
-                        <asp:BoundField DataField="TeacherID" HeaderText="LECTURER" />
+                        <asp:BoundField DataField="TeacherID" HeaderText="LECTURER	" />
                         <asp:BoundField DataField="Attended" HeaderText="ATTEDANCE STATUS" />
+                        <asp:BoundField HeaderText="LECTURER'S COMMENT" />
                     </Columns>
+                    
                 </asp:GridView>
 
             </div>

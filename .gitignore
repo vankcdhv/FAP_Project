@@ -19,3 +19,5 @@ FAP_Project/bin/roslyn/vbc.exe
 FAP_Project/bin/roslyn/vbc.rsp
 FAP_Project/bin/roslyn/VBCSCompiler.exe
 FAP_Project/obj/Debug/FAP_Project.csproj.FileListAbsolute.txt
+FAP_Project/obj/Debug/FAP_Project.csproj.CopyComplete
+FAP_Project/obj/Debug/FAP_Project.csprojAssemblyReference.cache

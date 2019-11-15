@@ -15,7 +15,7 @@
         <h1> Grade Report for <asp:Label ID="lbStudent" runat="server"></asp:Label> </h1>
         <div class="wrap-all">
             <div class="leftside">
-                <div style="">
+                <div>
                     <asp:ListBox AutoPostBack="true" ID="lbSubject" runat="server" OnSelectedIndexChanged="lbSubject_SelectedIndexChanged1" ></asp:ListBox>
                 </div>
             </div>
@@ -29,8 +29,8 @@
                     </asp:GridView>
                 </div>
                 <div>
-                    <p> COURSE TOTAL AVERAGE  <asp:Label ID="lbAverage" runat="server"> </asp:Label> </p>
-                    <p> STATUS <asp:Label ID="lbStatus" runat="server"> </asp:Label> </p>
+                    <p> <b> COURSE TOTAL AVERAGE </b>  <asp:Label ID="lbAverage" runat="server" Font-Bold="true" > </asp:Label> </p>
+                    <p><b> STATUS </b>  <asp:Label ID="lbStatus" runat="server" ForeColor="Red" > </asp:Label> </p>
                 </div>
             </div>
         </div>

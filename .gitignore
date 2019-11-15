@@ -21,3 +21,8 @@ FAP_Project/bin/roslyn/VBCSCompiler.exe
 FAP_Project/obj/Debug/FAP_Project.csproj.FileListAbsolute.txt
 FAP_Project/obj/Debug/FAP_Project.csproj.CopyComplete
 FAP_Project/obj/Debug/FAP_Project.csprojAssemblyReference.cache
+FAP_Project/.vs/FAP_Project/config/applicationhost.config
+FAP_Project/obj/Debug/FAP_Project.csprojAssemblyReference.cache
+FAP_Project/.vs/FAP_Project/config/applicationhost.config
+*.config
+FAP_Project/.vs/FAP_Project/config/applicationhost.config

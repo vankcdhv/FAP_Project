@@ -27,7 +27,7 @@ namespace Fap_Project.App_Code.DAO
                 instance = value;
             }
         }
-
+        // Function By Nguyen Huy Hoang
         public List<Subject> getAllSubjects()
         {
             List<Subject> list = new List<Subject>();

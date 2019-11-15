@@ -17,9 +17,11 @@ namespace Fap_Project
             if (!IsPostBack) 
             {
                 Account account = (Account)Session["Account"];
+                Student s = StudentDAO.Instance.getStudentByAccountID(account.Id);
+                lbStudent.Text = s.Name + " (" + s.Rollnumber + " )";
                 LoadDataForListBox();
                 LoadDataForDGV();
-                lbStudent.Text = Account
+                
             }
         }
 
@@ -35,7 +37,9 @@ namespace Fap_Project
 
         private void LoadDataForDGV()
         {
-            string studentID = "HE130395";
+            Account account = (Account)Session["Account"];
+            Student s = StudentDAO.Instance.getStudentByAccountID(account.Id);
+            string studentID = s.Rollnumber;
             string subjectID = lbSubject.SelectedValue;
             List<Mark> list = MarkDAO.Instance.getMarkBySubjectIDAndStudentID(subjectID, studentID);
             dgvListMark.DataSource = list;

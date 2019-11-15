@@ -27,7 +27,7 @@ namespace Fap_Project.App_Code.DAO
                 instance = value;
             }
         }
-
+        // Function By Nguyen Huy Hoang
         public List<Mark> getMarkBySubjectIDAndStudentID(string subjectID, string studentID)
         {
             List<Mark> list = new List<Mark>();

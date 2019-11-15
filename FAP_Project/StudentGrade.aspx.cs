@@ -16,12 +16,17 @@ namespace Fap_Project
         {
             if (!IsPostBack) 
             {
-                Account account = (Account)Session["Account"];
-                Student s = StudentDAO.Instance.getStudentByAccountID(account.Id);
-                lbStudent.Text = s.Name + " (" + s.Rollnumber + " )";
-                LoadDataForListBox();
-                LoadDataForDGV();
-                
+                if (((Account)Session["Account"] == null)){
+                    Response.Redirect("Login.aspx");
+                }
+                else
+                {
+                    Account account = (Account)Session["Account"];
+                    Student s = StudentDAO.Instance.getStudentByAccountID(account.Id);
+                    lbStudent.Text = s.Name + " (" + s.Rollnumber + " )";
+                    LoadDataForListBox();
+                    LoadDataForDGV();
+                }
             }
         }
 

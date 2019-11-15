@@ -1,12 +1,12 @@
 ﻿body {
 }
 
-.Wrap-all {
+.wrap-all {
+    display: flex;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: serif;
-    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: 300px;
 }
 
 .Header {
@@ -46,4 +46,20 @@
 .Align-center {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.container {
+    display: flex;
+}
+
+.leftside {
+    margin-left: 0;
+    border-right: dotted;
+    width:300px;
+}
+
+
+.content {
+    padding-left: 10px;
+    width: auto;
 }

@@ -61,5 +61,36 @@ namespace Fap_Project.App_Code.DAO
             return list;
         }
 
-    }
+        //Dũng , getAllSubject by Student
+        public List<Subject> getAllSubjectIDByStudent(Student std)
+        {
+            List<Subject> list = new List<Subject>();
+            String studentID = std.Rollnumber;
+
+            String query = "EXEC dbo.getSubjectIDByStudentID @StudentID = " + studentID;
+
+            DataTable data = DataProvider.Instance.excuteQuery(query, null);
+            foreach (DataRow dr in data.Rows)
+            {
+                string id = dr["SubjectID"].ToString();
+                string name = dr["Name"].ToString();
+                Subject s = new Subject(id, name);
+                list.Add(s);
+            }
+
+            return list;
+        }
+
+        public DataTable getCourseInfo(String studentID, String subjectID)
+        {
+            //DataTable data = null;
+            String query = "EXEC dbo.GetAllBySubjecIDtAndStudentID @StudentID = " + studentID + ", @SubjectID = " + subjectID;
+            DataTable data = DataProvider.Instance.excuteQuery(query, null);
+
+            return data;
+
+        }
+    
+
+}
 }

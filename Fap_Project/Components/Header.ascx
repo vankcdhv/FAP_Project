@@ -6,9 +6,16 @@
     </h1>
 
     <div class="Navigation">
+        <div class="menu">
+            <div>
+                <a href="../Index.aspx">Home</a>
+            </div>
+        </div>
         <div class="Account" id="DivAccount" runat="server">
             <div style="padding-left: 5px">
-                <asp:HyperLink ID="AccountLink" runat="server"></asp:HyperLink>
+                <div class="BoxAccount">
+                    <asp:HyperLink ID="AccountLink" runat="server"></asp:HyperLink>
+                </div>
             </div>
             <div style="padding-left: 5px">
                 <a href="Login.aspx">
@@ -17,7 +24,7 @@
                     </div>
                 </a>
             </div>
-
         </div>
+        
     </div>
 </div>

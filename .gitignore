@@ -5,3 +5,4 @@ FAP_Project/.vs/FAP_Project/v16/Server/sqlite3/storage.ide
 FAP_Project/.vs/FAP_Project/v16/Server/sqlite3/storage.ide-shm
 FAP_Project/.vs/FAP_Project/v16/Server/sqlite3/storage.ide-wal
 FAP_Project/obj/Debug/FAP_Project.csprojAssemblyReference.cache
+*.config

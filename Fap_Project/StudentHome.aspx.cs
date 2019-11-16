@@ -19,9 +19,9 @@ namespace Fap_Project
             else
             {
                 Account account = (Account)Session["Account"];
-                if (account.Type == 0)
+                if (account.Type == 1)
                 {
-                    Response.Redirect("~/TeacherHome.aspx");
+                    Response.Redirect("TeacherHome.aspx");
                 }
             }
             if (!IsPostBack)

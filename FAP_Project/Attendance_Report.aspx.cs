@@ -14,11 +14,12 @@ namespace Fap_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            loadComponents();
             if (Session["Account"] == null)
                 Response.Redirect("Login.aspx");
             if (!IsPostBack)
             {
-                loadComponents();
+                
                 loadDataListBox();
                 showAttendanceReport();
             }
@@ -63,6 +64,12 @@ namespace Fap_Project
             {
                 DateTime date = Convert.ToDateTime(dtb.Rows[i]["Day"]);
                 dgv.Rows[i].Cells[0].Text = date.ToShortDateString();
+
+                Boolean attended = Convert.ToBoolean(dtb.Rows[i]["Attended"]);
+                String atd = "Present";
+                if (attended == false) atd = "Absent";
+                dgv.Rows[i].Cells[3].Text = atd;
+
             }
         }
 

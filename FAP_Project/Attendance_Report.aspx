@@ -26,7 +26,7 @@
                         <asp:BoundField HeaderText="DATE" />
                         <asp:BoundField DataField="Slot" HeaderText="SLOT" />
                         <asp:BoundField DataField="TeacherID" HeaderText="LECTURER	" />
-                        <asp:BoundField DataField="Attended" HeaderText="ATTEDANCE STATUS" />
+                        <asp:BoundField HeaderText="ATTEDANCE STATUS" />
                         <asp:BoundField HeaderText="LECTURER'S COMMENT" />
                     </Columns>
                     

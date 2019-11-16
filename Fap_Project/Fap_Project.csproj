@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddMark.aspx" />
     <Content Include="Attendance_Report.aspx" />
     <Content Include="Components\Footer.ascx" />
     <Content Include="Components\Header.ascx" />
@@ -82,6 +83,13 @@
     <Content Include="WeeklyTimeTable.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMark.aspx.cs">
+      <DependentUpon>AddMark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddMark.aspx.designer.cs">
+      <DependentUpon>AddMark.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\DAO\AccountDAO.cs" />
     <Compile Include="App_Code\DAO\ClassDAO.cs" />
     <Compile Include="App_Code\DAO\ClassSubjectDAO.cs" />
@@ -89,6 +97,7 @@
     <Compile Include="App_Code\DAO\MarkDAO.cs" />
     <Compile Include="App_Code\DAO\StudentDAO.cs" />
     <Compile Include="App_Code\DAO\SubjectDAO.cs" />
+    <Compile Include="App_Code\DAO\TeacherDAO.cs" />
     <Compile Include="App_Code\DAO\TimeTableDAO.cs" />
     <Compile Include="App_Code\DTO\Account.cs" />
     <Compile Include="App_Code\DTO\Class.cs" />
@@ -96,6 +105,7 @@
     <Compile Include="App_Code\DTO\Mark.cs" />
     <Compile Include="App_Code\DTO\Student.cs" />
     <Compile Include="App_Code\DTO\Subject.cs" />
+    <Compile Include="App_Code\DTO\Teacher.cs" />
     <Compile Include="App_Code\DTO\TimeTable.cs" />
     <Compile Include="Attendance_Report.aspx.cs">
       <DependentUpon>Attendance_Report.aspx</DependentUpon>

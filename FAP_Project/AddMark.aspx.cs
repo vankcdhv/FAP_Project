@@ -49,13 +49,21 @@ namespace Fap_Project
             lbClass.DataTextField = "name";
             lbClass.DataValueField = "id";
             lbClass.DataSource = ClassDAO.Instance.getAllClasses();
+            lbClass.SelectedIndex = 0;
             lbClass.DataBind();
         }
 
-
+        void LoadDataForListBoxSubject()
+        {
+            lbSubject.DataTextField = "name";
+            lbSubject.DataValueField = "id";
+            lbSubject.DataSource = SubjectDAO.Instance.getSubjectByClassID(Convert.ToInt32(lbClass.SelectedValue));
+            lbSubject.SelectedIndex = 0;
+            lbSubject.DataBind();
+        }
         protected void lbClass_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LoadDataForListBoxSubject();
         }
 
         protected void lbSubject_SelectedIndexChanged(object sender, EventArgs e)
